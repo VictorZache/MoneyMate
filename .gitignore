@@ -29,7 +29,7 @@ bin/
 .DS_Store
 
 
-src/app/txt.txt
+src/main/txt.txt
 src/model/txt.txt
 src/repository/txt.txt
 src/service/oi.txt
