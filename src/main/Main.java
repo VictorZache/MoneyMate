@@ -1,36 +1,41 @@
-package app;
+package main;
 
 import db.*;
 import model.*;
-
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        FinanceManager manager = new FinanceManager();
+    /*    // Criando instâncias de Income, Expense e Investment
+        Income income = new Income(3000.0, LocalDate.now(), "Salary");
+        Expense expense = new Expense(1000.0, LocalDate.now(), "Rent");
+        Investment investment = new Investment(5000.0, LocalDate.now(), "Stocks", 7.5);
 
-        // Adicionando receitas
-        manager.addIncome(3000.0, LocalDate.now(), "Salary");
-        manager.addIncome(500.0, LocalDate.now(), "Freelance");
+        // Inserindo no banco de dados
+        FinanceDAO.insertIncome(income);
+        FinanceDAO.insertExpense(expense);
+        FinanceDAO.insertInvestment(investment);
 
-        // Adicionando despesas
-        manager.addExpense(1000.0, LocalDate.now(), "Rent");
-        manager.addExpense(200.0, LocalDate.now(), "Food");
+        System.out.println("Data inserted successfully!"); */
 
-        // Adicionando investimentos
-        manager.addInvestment(5000.0, LocalDate.now(), "Stocks", 7.5); // Rendimento de 7,5%
+        Scanner input = new Scanner(System.in);
+        System.out.println("MENU");
 
-        // Listando os registros
-        manager.listIncomes();
-        manager.listExpenses();
-        manager.listInvestments();
+        int cont = 0;
 
-        // Calculando o saldo
-        double balance = manager.calculateBalance();
-        System.out.println("Balance: $" + balance);
+        while(cont <= 0){
+            System.out.println("Oque deseja fazer?");
+            System.out.println("Opções:");
+            System.out.println("1. Adicionar Renda. \n" +
+                    "2. Adicionar Despesa. \n" +
+                    "3. Adiconar Investimento.\n");
 
-        // Calculando o rendimento esperado total
-        double expectedReturn = manager.calculateExpectedReturn();
-        System.out.println("Expected Return: $" + expectedReturn);
+            if(cont == 1){
+
+            }
+
+        }
+
     }
 }
