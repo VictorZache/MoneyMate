@@ -16,13 +16,13 @@ public class Investment {
         this.expectedReturn = expectedReturn;
     }
 
-    public Investment() {
-        this.amount = 0.0;
-        this.date = LocalDate.now();
-        this.type = "???";
+    public Investment(double amount, LocalDate date) {
+        this.amount = amount;
+        this.date = date;
+        this.type = "Unknown";
         this.expectedReturn = 0.0;
-
     }
+
 
     public double getAmount() {
         return amount;

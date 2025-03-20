@@ -13,9 +13,9 @@ public class Expense {
         this.category = category;
     }
 
-    public Expense(){
-        this.amount = 0.0;
-        this.date = LocalDate.now();
+    public Expense(double amount, LocalDate date){
+        this.amount = amount;
+        this.date = date;
         this.category = "???";
     }
 

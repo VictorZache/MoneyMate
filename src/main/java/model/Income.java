@@ -15,10 +15,10 @@ public class Income {
     }
 
     //Caso os parametros nao sejam passados
-    public Income() {
-        this.amount = 0.0;
-        this.date = LocalDate.now();
-        this.source = "???";
+    public Income(double amount, LocalDate date) {
+        this.amount = amount;
+        this.date = date;
+        this.source = "Unknown";
 
     }
 
